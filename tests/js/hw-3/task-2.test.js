@@ -1,6 +1,6 @@
 import { sum } from '../../../js/hw-3/task-2';
 
-describe('Homework 4 - Factorial Function', () => {
+describe('[JS] - [HW 3] - Task 2', () => {
   test('should return 123 for n = 1', () => {
     expect(sum(1)).toBe(123); // 1 + 11 + 111
   });
