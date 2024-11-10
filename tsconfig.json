@@ -5,6 +5,6 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "include": ["tests", "ts", "js"],
+  "include": ["tests", "homework-solutions/ts", "homework-solutions/js"],
   "exclude": ["node_modules"]
 }
