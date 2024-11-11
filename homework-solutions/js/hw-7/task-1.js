@@ -27,4 +27,5 @@ function devideBy(sentence) {
 function fibonacci(n) {
   // Ваш код
 }
+
 export { mergeArrays, fibonacci, devideBy };

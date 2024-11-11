@@ -2,11 +2,14 @@
   "name": "aqa_course_hw_unit_tests",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "js-7-1": "jest tests/js/hw-7/task-1.test.js",
     "js-7-2": "jest tests/js/hw-7/task-2.test.js",
     "js-7-3": "jest tests/js/hw-7/task-3.test.js",
+    "js-8-1": "jest tests/js/hw-8/task-1.test.js",
+    "js-8-2": "jest tests/js/hw-8/task-2.test.js",
+    "js-8-3": "jest tests/js/hw-8/task-3.test.js",
     "pre-commit": "prettier . --write && git add -A ."
   },
   "author": "",

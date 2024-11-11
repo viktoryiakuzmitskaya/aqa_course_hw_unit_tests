@@ -1,6 +1,6 @@
 import { mergeArrays, devideBy, fibonacci } from '../../../homework-solutions/js/hw-7/task-1';
 
-describe('[JS] - [HW 3] - Task 1', () => {
+describe('[JS] - [HW 7] - Task 1', () => {
   describe('mergeArray', () => {
     test('should merge multiple arrays of numbers into a single array', () => {
       expect(mergeArrays([1, 2], [3, 4], [5, 6])).toEqual([1, 2, 3, 4, 5, 6]);
