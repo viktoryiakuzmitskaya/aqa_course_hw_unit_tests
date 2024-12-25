@@ -27,12 +27,6 @@ function getCharactersByAge(minAge) {
 
 function updateCharacter(name, newCharacter) {
   // Ваш код
-  const character = getCharacter(name);
-  if (!character) {
-    throw new Error();
-  }
-  character.name = newCharacter.name || character.name;
-  character.age = newCharacter.age || character.age;
 }
 
 function removeCharacter(name) {
