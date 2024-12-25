@@ -11,6 +11,9 @@
     "js-8-2": "jest tests/js/hw-8/task-2.test.js",
     "js-8-3": "jest tests/js/hw-8/task-3.test.js",
     "js-9-2": "jest tests/js/hw-9/task-2.test.js",
+    "js-10-1": "jest tests/js/hw-10/task-1.test.js",
+    "js-10-2": "jest tests/js/hw-10/task-2.test.js",
+    "js-10-3": "jest tests/js/hw-10/task-3.test.js",
     "pre-commit": "prettier . --write && git add -A ."
   },
   "author": "",
