@@ -1,21 +1,27 @@
-import { digitalRoot } from '../../../homework-solutions/js/hw-7/task-3';
+import { uniqueRandomGenerator } from '../../../homework-solutions/js/hw-10/task-3.mjs';
 
-describe('[JS] - [HW 7] - Task 3', () => {
-  describe('digitalRoot', () => {
-    test('returns the correct digital root for a single-digit number', () => {
-      expect(digitalRoot(5)).toBe(5);
+describe('[JS] - [HW 10] - Task 3', () => {
+  describe('uniqueRandomGenerator', () => {
+    test("Generates unique random numbers up to n", () => {
+      const n = 5;
+      const randomGenerator = uniqueRandomGenerator(n);
+  
+      const generatedNumbers = new Set();
+      for (let i = 0; i < n; i++) {
+        const number = randomGenerator();
+        expect(generatedNumbers.has(number)).toBe(false);
+        expect(number).toBeGreaterThanOrEqual(1);
+        expect(number).toBeLessThanOrEqual(n);
+        generatedNumbers.add(number);
+      }
+  
+      expect(randomGenerator()).toBe("All numbers were received");
+      expect(randomGenerator()).toBe("All numbers were received");
     });
 
-    test('returns the correct digital root for a number with multiple digits', () => {
-      expect(digitalRoot(19)).toBe(1); // 1 + 9 = 10 -> 1 + 0 = 1
-    });
-
-    test('returns 0 for an input of 0', () => {
-      expect(digitalRoot(0)).toBe(0);
-    });
-
-    test('returns the correct digital root for a very large number', () => {
-      expect(digitalRoot(987654321)).toBe(9); // 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45 -> 4 + 5 = 9
+    test("Returns 'All numbers were received' immediately if n is 0", () => {
+      const randomGenerator = uniqueRandomGenerator(0);
+      expect(randomGenerator()).toBe("All numbers were received");
     });
   });
 });
