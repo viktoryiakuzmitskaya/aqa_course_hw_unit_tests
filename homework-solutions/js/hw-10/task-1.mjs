@@ -39,7 +39,6 @@ let applyResult;
 
 function createCounter() {
   // Ваш код
-  console.log('aaaa')
 }
 
 const functionCallCounter = createCounter();
