@@ -4,7 +4,7 @@ import {
   callResult,
   applyResult,
   functionCallCounter,
-  anotherQa
+  anotherQa,
 } from '../../../homework-solutions/js/hw-10/task-1.mjs';
 
 describe('[JS] - [HW 10] - Task 1', () => {
@@ -18,17 +18,23 @@ describe('[JS] - [HW 10] - Task 1', () => {
   describe('Changing the context', () => {
     test('getInfo with bind should return correct string', () => {
       const result = bindResult;
-      expect(result).toBe(`Hello, my name is ${anotherQa.name}, I'm ${anotherQa.age} and my salary is ${anotherQa.salary}`);
+      expect(result).toBe(
+        `Hello, my name is ${anotherQa.name}, I'm ${anotherQa.age} and my salary is ${anotherQa.salary}`,
+      );
     });
 
     test('getInfo with call should return correct string', () => {
       const result = callResult;
-      expect(result).toBe(`Hi, my name is ${anotherQa.name}, I'm ${anotherQa.age} and my salary is ${anotherQa.salary}`);
+      expect(result).toBe(
+        `Hi, my name is ${anotherQa.name}, I'm ${anotherQa.age} and my salary is ${anotherQa.salary}`,
+      );
     });
 
     test('getInfo with apply should return correct string', () => {
       const result = applyResult;
-      expect(result).toBe(`Hey, my name is ${anotherQa.name}, I'm ${anotherQa.age} and my salary is ${anotherQa.salary}`);
+      expect(result).toBe(
+        `Hey, my name is ${anotherQa.name}, I'm ${anotherQa.age} and my salary is ${anotherQa.salary}`,
+      );
     });
   });
 
