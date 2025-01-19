@@ -1,7 +1,7 @@
 import { keyWithFourChars, hasSalaryKey1stOption, hasSalaryKey2ndOption, stringValues, keyValuePairs, logSpy } from "../../../homework-solutions/js/hw-9/task-1";
 const character = { name: 'Barney', age: 36, gender: 'male', isQa: true };
 
-describe('Character object tasks', () => {
+describe('[JS] - [HW 9] - Task 1', () => {
   test('Keys with 4 letters should be ["name", "isQa"]', () => {
     expect(keyWithFourChars).toEqual(['name', 'isQa']);
   });

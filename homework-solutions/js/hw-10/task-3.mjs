@@ -1,4 +1,3 @@
-// TODO
 /*
   Создайте функцию, принимающую число n, которая при каждом вызове будет
   генерировать случайное число [1 - n] включительно. 
@@ -15,6 +14,10 @@
       }
 
 */
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
 function uniqueRandomGenerator(n) {
   // Ваш код
