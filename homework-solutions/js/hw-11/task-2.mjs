@@ -1,3 +1,9 @@
+class Employee {
+  // Ваш код
+}
 
+class Company {
+  // Ваш код
+}
 
-export {  };
+export { Employee, Company };
