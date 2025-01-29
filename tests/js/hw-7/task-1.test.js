@@ -40,12 +40,12 @@ describe('[JS] - [HW 7] - Task 1', () => {
       expect(devideBy('')).toBe('');
     });
 
-    test('should handle extra spaces between words gracefully', () => {
-      expect(devideBy('I    am    an     engineer')).toBe('i_Am_An_Engineer');
-    });
-
     test('should handle words with uppercase letters correctly', () => {
       expect(devideBy('I AM A DEVELOPER')).toBe('i_Am_A_Developer');
+    });
+
+    test('[EXTRA] should handle extra spaces between words gracefully', () => {
+      expect(devideBy('I    am    an     engineer')).toBe('i_Am_An_Engineer');
     });
   });
 
@@ -65,7 +65,7 @@ describe('[JS] - [HW 7] - Task 1', () => {
     });
 
     test('should return correct Fibonacci number for a larger positive n', () => {
-      expect(fibonacci(20)).toBe(6765);
+      expect(fibonacci(68)).toBe(72723460248141);
     });
 
     test('should handle edge cases like n = 2 and n = 3 correctly', () => {
