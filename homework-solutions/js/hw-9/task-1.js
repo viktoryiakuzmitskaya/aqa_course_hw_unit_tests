@@ -8,7 +8,7 @@
    (Реализовать 2мя способами: через оператор "in" (1st) и "Object.hasOwn()" (2nd))
 */
 
-const character = { 'name': 'Barney', 'age': 36, 'gender': 'male', 'isQa': true };
+const character = { name: 'Barney', age: 36, gender: 'male', isQa: true };
 
 // 1
 let keyWithFourChars;

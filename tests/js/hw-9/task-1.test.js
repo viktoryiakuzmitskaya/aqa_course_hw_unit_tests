@@ -1,4 +1,11 @@
-import { keyWithFourChars, hasSalaryKey1stOption, hasSalaryKey2ndOption, stringValues, keyValuePairs, logSpy } from "../../../homework-solutions/js/hw-9/task-1";
+import {
+  keyWithFourChars,
+  hasSalaryKey1stOption,
+  hasSalaryKey2ndOption,
+  stringValues,
+  keyValuePairs,
+  logSpy,
+} from '../../../homework-solutions/js/hw-9/task-1';
 const character = { name: 'Barney', age: 36, gender: 'male', isQa: true };
 
 describe('[JS] - [HW 9] - Task 1', () => {
@@ -12,11 +19,11 @@ describe('[JS] - [HW 9] - Task 1', () => {
 
   test('Should check created "keyValuePairs" value', () => {
     expect(keyValuePairs).toEqual([
-        [ 'name', 'Barney' ],
-        [ 'age', 36 ],
-        [ 'gender', 'male' ],
-        [ 'isQa', true ]
-      ]);
+      ['name', 'Barney'],
+      ['age', 36],
+      ['gender', 'male'],
+      ['isQa', true],
+    ]);
   });
 
   test('Should correctly log key-value pairs using a for loop', () => {
