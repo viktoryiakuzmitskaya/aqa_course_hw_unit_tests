@@ -4,3 +4,7 @@
 n + nn + nnn, где n не перемножаются, а конкатенируются
 
 */
+
+let positiveNumber = 4;
+let result = positiveNumber + Number(positiveNumber.toString().repeat(2)) + Number(positiveNumber.toString().repeat(3));
+console.log(result);
