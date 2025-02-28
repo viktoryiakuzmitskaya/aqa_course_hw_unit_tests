@@ -19,7 +19,7 @@ numbers.forEach(item => item%3 === 0 && forEach.push(item));
 
 let map = numbers.map(item => item-=numbers.length);
 
-let filter = numbers.filter((item, index, numbers) => item > numbers[index-1]);
+let filter = numbers.filter((item, index, arr) => item > arr[index-1]);
 
 let find = numbers.find((item, index) => item === index);
 
