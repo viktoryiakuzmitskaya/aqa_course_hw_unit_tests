@@ -7,7 +7,13 @@
 */
 
 function findMissingNumber(numbers) {
-  // Ваш код
+  const maxItemInArray = numbers.length + 1;
+  let sumfOfArrayItemsWithMissingNumber = 0;
+  for (let i = 1; i <= maxItemInArray; i++) {
+    sumfOfArrayItemsWithMissingNumber += i;
+  }
+  const sumOfArrayItems = numbers.reduce(((sum, item) => sum + item), 0);  
+  return sumfOfArrayItemsWithMissingNumber - sumOfArrayItems;  
 }
 
 export { findMissingNumber };
