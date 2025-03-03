@@ -17,7 +17,7 @@ const numbers = [7, 8, 2, 30, 85, 95, 77, 94, 37, 31];
 let forEach = [];
 numbers.forEach(item => item%3 === 0 && forEach.push(item));
 
-let map = numbers.map(item => item-=numbers.length);
+let map = numbers.map((item, index, array) => item - array.length);
 
 let filter = numbers.filter((item, index, arr) => item > arr[index-1]);
 
