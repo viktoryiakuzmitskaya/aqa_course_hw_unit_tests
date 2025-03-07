@@ -17,7 +17,7 @@ function addCharacter(character) {
   if (typeof character.name === 'string' && typeof character.age === 'number') {
     characters.push(character);
   } else {
-    throw new Error('Invalid object/ Object should have fields "name" (string) and "age" (number)');
+    throw new Error('Invalid object. Object should have fields "name" (string) and "age" (number)');
   }
 }
 
