@@ -50,9 +50,15 @@ let applyResult = qa.getInfo.apply(anotherQa, ["Hey"]);
 */
 
 function createCounter() {
-  // Ваш код
+  let count = 0;
+  return () => {
+    count++;
+    console.log(`Function was called ${count} times`);
+    return count;
+  }
 }
 
 const functionCallCounter = createCounter();
+
 
 export { qa, bindResult, callResult, applyResult, functionCallCounter, anotherQa };
