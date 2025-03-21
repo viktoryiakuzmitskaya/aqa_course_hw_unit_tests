@@ -39,8 +39,9 @@ class Employee {
   set salary(value) {
     if (value < 0) {
       throw new Error("Invalid salary value");
+    } else {
+      this.#salary = value;
     }
-    this.#salary = value;
   }
 
   getFullName() {
@@ -85,8 +86,9 @@ class Company {
   addEmployee(employee) {
     if (!(employee instanceof Employee)) {
       throw new Error("Only instances of Employee can be added");
+    } else {
+      this.#employees.push(employee);
     }
-    this.#employees.push(employee);
   }
 
   getEmployees() {
