@@ -113,8 +113,9 @@ class Company {
   addEmployee(employee) {
     if (!(employee instanceof Employee)) {
       throw new Error("Only instances of Employee can be added");
+    } else {
+      this.#employees.push(employee);
     }
-    this.#employees.push(employee);
   }
 
   getEmployees() {
