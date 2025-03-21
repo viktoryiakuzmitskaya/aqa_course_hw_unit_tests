@@ -66,7 +66,7 @@ class Employee {
     if ((typeof value !== 'number') || Number.isNaN(value)) {
       throw new Error("Invalid data type, salary should be a number");
     } else if ((value <= 0) || (value >= 10000)) {
-      throw new Error("Invalid salary value, should be more than 0 nd less than 10000");
+      throw new Error("Invalid salary value, should be more than 0 and less than 10000");
     }
     this.#salary = value;
   }
