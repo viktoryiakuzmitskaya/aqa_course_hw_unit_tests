@@ -21,3 +21,56 @@
 //           albums:
 //             Album name 1 (10 photos)
 //             Album name 2 (100 photos)
+
+async function fetchUserData() {
+    try {
+      const [usersResponse, albumsResponse, photosResponse] = await Promise.all([
+        fetch("https://jsonplaceholder.typicode.com/users"),
+        fetch("https://jsonplaceholder.typicode.com/albums"),
+        fetch("https://jsonplaceholder.typicode.com/photos"),
+      ]);        
+      if (!usersResponse.ok) {
+        throw new Error("Failed to fetch users");
+      }
+      if (!albumsResponse.ok) {
+        throw new Error("Failed to fetch albums");
+      }
+      if (!photosResponse.ok) {
+        throw new Error("Failed to fetch photos");
+      }
+      const [users, albums, photos] = await Promise.all([
+        usersResponse.json(),
+        albumsResponse.json(),
+        photosResponse.json(),
+      ]);
+      const usersDetails = users.map((user) => {
+        const userAlbums = albums.filter((album) => album.userId === user.id);
+        const albumsWithPhotoCount = userAlbums.map((album) => {
+          const photoCount = photos.filter((photo) => photo.albumId === album.id).length;
+          return `${album.title} (${photoCount} photos)`;
+        });  
+        return {
+          name: user.name,
+          email: user.email,
+          phone: user.phone,
+          company: user.company.name,
+          albums: albumsWithPhotoCount,
+        };
+      });
+      usersDetails.forEach((user) => {        
+        console.log(`name: ${user.name}`);
+        console.log(`email: ${user.email}`);
+        console.log(`phone: ${user.phone}`);
+        console.log(`company: ${user.company}`);
+        console.log("albums:");
+        user.albums.forEach((album) => console.log(`  - ${album}`));
+        console.log("__________________________________");
+      });
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  }
+  
+  fetchUserData();
+
+
