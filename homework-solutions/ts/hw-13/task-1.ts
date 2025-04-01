@@ -63,7 +63,7 @@ interface FullAddress extends Adress {
 type Product = {
     id: number;
     name: string;
-    price?: number;
+    price: number;
 }
 
 type DiscountedProduct = Product & {
@@ -81,7 +81,7 @@ type DiscountedProduct = Product & {
   };
 
 function calculateDiscount(discountedProduct: DiscountedProduct): number {
-    const { price = 0, discount } = discountedProduct;
+    const { price, discount } = discountedProduct;
     return price - price*discount/100;    
 }
 
