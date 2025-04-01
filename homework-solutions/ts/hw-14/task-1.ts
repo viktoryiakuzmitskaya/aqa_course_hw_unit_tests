@@ -57,18 +57,22 @@ function wrapInArray<T>(value: T): T[] {
     return [value];
 }
 
-    const numberArray = wrapInArray(5); // [5]
-    const stringArray = wrapInArray('Hello'); // ['Hello']
-    // console.log(numberArray);
-    // console.log(stringArray);
+const numberArray = wrapInArray(5); // [5]
+const stringArray = wrapInArray('Hello'); // ['Hello']
+// console.log(numberArray);
+// console.log(stringArray);
 
 // 11. Создайте дженерик функцию getLastElement, которая принимает массив элементов типа T, и возвращает последний элемент (типа T).
 
 
 
-    function getLastItem<T>(items: T[]): T {
-      return items[items.length - 1];
-    }
+function getLastItem<T>(items: T[]): T {
+    if (!items.length) {
+        throw new Error("Array is empty");
+    } 
+    return items[items.length - 1];
+}
 
-    console.log(getLastItem([1, 2, 3, 4])); // 4
-    console.log(getLastItem(['a', 'b', 'c'])); // 'c'
+console.log(getLastItem([1, 2, 3, 4])); // 4
+console.log(getLastItem(['a', 'b', 'c'])); // 'c'
+//console.log(getLastItem([]));
