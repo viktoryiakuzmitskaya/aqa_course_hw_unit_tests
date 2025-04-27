@@ -42,7 +42,7 @@ abstract class Employee implements IPerson {
 //         'My name is Elena TSovna, I am software developer with 6 years of experience in TypeScript and 6000$ salary' (пример для девелопера)
 
 class Manager extends Employee {
-    constructor(public name: string, public surname: string, public experienceYears: number, public prefered: "scrum" | "kanban") {
+    constructor(name: string, surname: string, experienceYears: number, public prefered: "scrum" | "kanban") {
         super(name, surname, experienceYears);
     };
 
@@ -56,7 +56,7 @@ class Manager extends Employee {
 }
 
 class Developer extends Employee {
-    constructor(public name: string, public surname: string, public experienceYears: number, public programmingLanguage: "js" | "ts" | "java" | "python") {
+    constructor(name: string, surname: string, experienceYears: number, public programmingLanguage: "js" | "ts" | "java" | "python") {
         super(name, surname, experienceYears);
     };
 
